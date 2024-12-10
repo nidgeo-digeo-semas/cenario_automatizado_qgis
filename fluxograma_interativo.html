@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+</head>
+<body>
+<h2>Fluxograma Interativo</h2>
+<div class="mermaid">
+graph TD
+    A[Início] --> B[Carregar Base Vetorial]
+    B --> C[Filtrar Imóvel]
+    C --> D{Imóvel Encontrado?}
+    D -- Sim --> E[Gerar Buffer de 15km]
+    D -- Não --> F[Fim]
+    E --> G[Clipar Camadas]
+    G --> H[Exportar Resultados]
+    H --> F[Fim]
+</div>
+</body>
+</html>
